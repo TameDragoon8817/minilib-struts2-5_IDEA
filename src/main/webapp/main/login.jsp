@@ -1,16 +1,3 @@
-<!-- 
-/***********************************************************
-*													
-*														
-*	项目名称：				
-*	子系统名：			
-*	功能名称：	
-*	完成人员：					
-*	完成时间：					
-*								
-*									
-************************************************************/
--->
 <%@ page contentType="text/html; charset=UTF-8"
 		 pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -105,6 +92,9 @@
 			  </label>
 		  </div>
 		  <button class="w-100 btn btn-lg btn-primary" type="submit" name="login">登录</button>
+		  <a href="register.jsp">
+		  <button class="w-100 btn btn-lg btn-info" type="button">注册</button>
+		  </a>
 		  <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
 	  </form>
   </main>

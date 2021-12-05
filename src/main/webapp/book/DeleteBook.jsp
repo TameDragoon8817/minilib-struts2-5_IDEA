@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>删除图书</title>
 </head>
 <body>
-
+<a>请输入要删除的书籍名称：</a>
 </body>
 </html>

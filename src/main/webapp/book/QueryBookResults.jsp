@@ -35,7 +35,7 @@
 										</td>
 									
 									</tr>
-	<c:forEach items="${requestScope.allTiltesList}" var="title" varStatus="status">
+	<c:forEach items="${requestScope.TiltesList}" var="title" varStatus="status">
 		<tr bgcolor="#fba661" height="25">
 			<td width="10%">
 				<div align="center">

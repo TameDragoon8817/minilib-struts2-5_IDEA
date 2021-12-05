@@ -33,6 +33,28 @@ public class ManageTitlesDao {
 		}
 		return list;
 	}
+
+	public List<Object> FindBooksAsTitle(Title book) throws InstantiationException,IllegalAccessException,ClassNotFoundException,SQLException{
+		List<Object> list = new ArrayList<>();
+		Connection conn = DBUtil.getConnection();
+		String strsql = "select * from t_book where t_book.title like '%"+book.getTitle()+"%' order by t_book.bookid";
+		System.out.print("strsql="+strsql);
+		PreparedStatement pstmt = conn.prepareStatement(strsql);
+		ResultSet rs = pstmt.executeQuery();
+		while (rs.next()) {
+			Title title = new Title();
+			title.setIsbn(rs.getString(3));
+			title.setTitle(rs.getString(5));
+			title.setAuthors(rs.getString(6));
+			title.setPressid(rs.getString(8));
+			list.add(title);
+		}
+		rs.close();
+		pstmt.close();
+		conn.close();
+		return list;
+	}
+
 	public List<CodeBookType> findBookType() throws InstantiationException,IllegalAccessException,ClassNotFoundException,SQLException{
 		List<CodeBookType> list = new ArrayList<>();
 		Connection conn = DBUtil.getConnection();
@@ -62,4 +84,6 @@ public class ManageTitlesDao {
 		stmt.close();
 		conn.close();
 	}
+
+
 }

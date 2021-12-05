@@ -1,5 +1,6 @@
 package minilib.action;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -50,12 +51,20 @@ public class ManageTitlesAction extends ActionSupport {
 		System.out.print("===Query===");
 		return "querybook";
 	}
-	public String findAllTitles() {
+	public String findTitles() {
 		ManageTitlesDao mt= new ManageTitlesDao();
-		List allTiltesList = mt.findAll();
+		List TiltesList = null;
+		try {
+			TiltesList = mt.FindBooksAsTitle(book);
+		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
 		HttpServletRequest request = ServletActionContext.getRequest();
-		request.setAttribute("allTiltesList", allTiltesList);
-		System.out.print("-findAllTitles-");
+		request.setAttribute("TiltesList", TiltesList);
+		System.out.print("-findTitles-");
 		return "querybook";
 	}
+
+
+
 }

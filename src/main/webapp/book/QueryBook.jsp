@@ -7,9 +7,9 @@
 <title>查询图书</title>
 </head>
 <body>
-
-<form method="post" action="ManageTitlesAction!findAllTitles.action">
-	<input type="text" name="context" id="context" value="">
+<a>请输入需要查找书籍的标题的关键字</a>
+<form method="post" action="ManageTitlesAction!findTitles.action">
+	<input type="text" name="book.title" id="context" value="">
 	<input type="submit" name="submit" value="查询图书">
 </form>
 

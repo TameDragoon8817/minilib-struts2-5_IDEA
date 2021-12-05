@@ -102,6 +102,12 @@
             <input type="password" class="form-control" id="floatingPassword" name="userpass" placeholder="name@example.com">
             <label for="floatingPassword">密码</label>
         </div>
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
         <button class="w-100 btn btn-lg btn-primary" type="submit" name="register">注册</button>
         <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
     </form>
