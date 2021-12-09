@@ -8,7 +8,7 @@ import minilib.util.DBUtil;
 import minilib.vo.*;
 
 public class ManageTitlesDao {
-	public List<Title> findAll() {
+	/*public List<Title> findAll() {
 		List<Title> list = new ArrayList<>();
 		try {
 			Connection conn = DBUtil.getConnection();
@@ -32,7 +32,7 @@ public class ManageTitlesDao {
 			e.printStackTrace();
 		}
 		return list;
-	}
+	}*//*被模糊搜索替代*/
 
 	public List<Object> FindBooksAsTitle(Title book) throws InstantiationException,IllegalAccessException,ClassNotFoundException,SQLException{
 		List<Object> list = new ArrayList<>();
@@ -53,7 +53,7 @@ public class ManageTitlesDao {
 		pstmt.close();
 		conn.close();
 		return list;
-	}
+	}/*按照图书关键字模糊搜索*/
 
 	public List<CodeBookType> findBookType() throws InstantiationException,IllegalAccessException,ClassNotFoundException,SQLException{
 		List<CodeBookType> list = new ArrayList<>();
@@ -72,7 +72,7 @@ public class ManageTitlesDao {
 		stmt.close();
 		conn.close();
 		return list;
-	}
+	}/*从数据库查询图书类型*/
 	
 	public void saveTitle(Title book) throws InstantiationException,IllegalAccessException,ClassNotFoundException,SQLException{
 		Connection conn = DBUtil.getConnection();
@@ -83,7 +83,7 @@ public class ManageTitlesDao {
 		stmt.executeUpdate(sql);
 		stmt.close();
 		conn.close();
-	}
+	}/*将增加图书的数据写入数据库中*/
 
 
 }

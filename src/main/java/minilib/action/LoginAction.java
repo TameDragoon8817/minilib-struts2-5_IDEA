@@ -18,8 +18,8 @@ public class LoginAction extends ActionSupport {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String userpass;
-	private String username;
+	private String userpass;/*定义用户密码*/
+	private String username;/*定义用户名*/
 	public String getUserpass() {
 		return userpass;
 	}
@@ -31,7 +31,7 @@ public class LoginAction extends ActionSupport {
 	}
 	public void setUsername(String username) {
 		this.username = username;
-	}
+	}/*自动生成Getter和Setter*/
 	public String execute() throws Exception{
 		if(getUsername().equals("admin")&&getUserpass().equals("123456")){
 			HttpServletRequest request = ServletActionContext.getRequest();
@@ -42,5 +42,5 @@ public class LoginAction extends ActionSupport {
 		else {
 			return "error";
 		}
-	}
+	}/*判断用户名和密码是否匹配并返回相应值*/
 }

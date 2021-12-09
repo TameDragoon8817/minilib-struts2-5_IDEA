@@ -74,7 +74,6 @@
 
   <main class="form-signin">
 	  <form method="post" action="LoginAction" name="frm">
-		  <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
 		  <h1 class="h3 mb-3 fw-normal">请登录</h1>
 
 		  <div class="form-floating">
